@@ -20,7 +20,7 @@ const Dashboard = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/repo/user/${userId}`
+          `16.171.177.72:3000/repo/user/${userId}`
         );// aslo by axios.post   686d4f6227d7e32a67ee7ec1
         const data = await response.json();
         setRepositories(data.repositories);
@@ -31,7 +31,7 @@ const Dashboard = () => {
 
     const fetchSuggestedRepositories = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/repo/all`);
+        const response = await fetch(`16.171.177.72:3000/repo/all`);
         const data = await response.json();
         setSuggestedRepositories(data);
         console.log(suggestedRepositories);
